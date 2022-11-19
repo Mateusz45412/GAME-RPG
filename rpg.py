@@ -43,7 +43,7 @@ while (energy>=0):
 
     if place == "f":
         print(f"{nick} you meet a snake in the forest, what do you do? :")
-        print("1-FLIGH")
+        print("1-ATTACK")
         print("2-ESCAPE")
         do = int(input("what you choose 1 or 2 "))
         if do == 1:
@@ -54,7 +54,7 @@ while (energy>=0):
                 snake = snake - equipment[item]
                 energy = energy - 2
                 eat = eat + 10
-                print(f"snake - {snake}\nyou energy {energy}")
+                print(f"snake {snake}\nyou energy {energy}")
                 if snake <= 0:
                     print(f"YOU ARE WON snake is dead\nsnake {snake}\nyou energy {energy}")
                     break
