@@ -15,11 +15,11 @@ while (energy>=0):
     place = input("inn(i), forest(f)").lower()
     if place == "i":
         print(f"{nick} you are in the inn, you are talking:")
-        print("1-poszukuje pracy")
-        print("2-chce się napić piwa")
-        do = int(input("wpisz opcje którą wybierasz 1 lub 2 "))
+        print("1- I looking for a job")
+        print("2- I wants to drink beer")
+        do = int(input("choose 1 or 2 "))
         if do == 1:
-            print("OK pozmywaj naczynia a dostaniesz  10 gramów złota")
+            print("OK wash the dishes a 10 grams of gold")
             deal = input("do you agree y/n").lower()
             if deal == "y":
                 w = True
@@ -30,7 +30,7 @@ while (energy>=0):
                 energy = energy-1
                 gold = gold+10
             elif deal == "n":
-                print("Trudno twoja sprawa")
+                print("your business")
         elif do == 2:
                 print("Beer costs 10 grams of gold")
                 deal = input("do you agree y/n").lower()
