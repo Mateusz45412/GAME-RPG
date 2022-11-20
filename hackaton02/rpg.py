@@ -1,6 +1,5 @@
 import name_module
 import energy_module
-
 nick = (name_module.sex())
 start_energy = 100
 energy = 100
@@ -9,7 +8,6 @@ equipment = {'sword': 15, 'axe': 50, 'stock': 2}
 snake_start = 90
 snake_energy = 90
 eat = 10
-print("Welcome to game RPG")
 print(f"Welcome {nick} !")
 while (energy>=0):
     energy_module.energies(energy, start_energy, nick)
@@ -52,13 +50,16 @@ while (energy>=0):
         if do == 1:
             while snake_energy != 0:
                 print(equipment)
-                item = input("enter what you want to attack ").lower()
-                print("Attack" * 5)
-                snake_energy = snake_energy - equipment[item]
-                energy = energy - 5
-                eat = eat + 10
-                energy_module.energies(snake_energy, snake_start, "SNAKE")
-                energy_module.energies(energy, start_energy, nick)
+                try:
+                    item = input("enter what you want to attack ").lower()
+                    print("Attack" * 5)
+                    snake_energy = snake_energy - equipment[item]
+                    energy = energy - 5
+                    eat = eat + 10
+                    energy_module.energies(snake_energy, snake_start, "SNAKE")
+                    energy_module.energies(energy, start_energy, nick)
+                except KeyError:
+                    print("Type correctly item")
                 if snake_energy <= 0:
                     print(f"YOU ARE WON snake is dead")
                     energy_module.energies(energy, start_energy, nick)
