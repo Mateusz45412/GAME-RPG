@@ -62,7 +62,6 @@ while (energy>=0):
                     print("Type correctly item")
                 if snake_energy <= 0:
                     print(f"YOU ARE WON snake is dead")
-                    energy_module.energies(energy, start_energy, nick)
                     energy_module.energies(snake_energy, snake_start, "SNAKE")
                     break
         elif do == 2:

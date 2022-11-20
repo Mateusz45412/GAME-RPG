@@ -12,7 +12,7 @@ def energies(energia, start_energy, name):
         [f" {name}📗📗📗📕📕📕📕📕📕📕 {percent}%"],
         [f" {name}📗📗📕📕📕📕📕📕📕📕 {percent}%"],
         [f" {name}📗📕📕📕📕📕📕📕📕📕 {percent}%"],
-        [f" {name}📕📕📕📕📕📕📕📕📕📕 {percent}%"],
+        [f" {name}📕📕📕📕📕📕📕📕📕📕 0 %"],
     ]
 
     if energia == 100: print(*see[0])
@@ -25,5 +25,5 @@ def energies(energia, start_energy, name):
     elif energia >= 30: print(*see[7])
     elif energia >= 20: print(*see[8])
     elif energia >= 10: print(*see[9])
-    elif energia >= 0: print(*see[10])
+    elif energia <= 0: print(*see[10])
     return percent
